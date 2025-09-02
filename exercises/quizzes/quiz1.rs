@@ -10,7 +10,17 @@
 
 // TODO: Write a function that calculates the price of an order of apples given
 // the quantity bought.
-// fn calculate_price_of_apples(???) -> ??? { ??? }
+fn calculate_price_of_apples(quantity: i32) -> i32 {
+    let cost_per_apple = 2;
+    let discount_per_apple = 1;
+    let discount_quantity_threshold = 40;
+
+    if quantity > discount_quantity_threshold {
+        quantity * (cost_per_apple - discount_per_apple)
+    } else {
+        quantity * cost_per_apple
+    }
+}
 
 fn main() {
     // You can optionally experiment here.
